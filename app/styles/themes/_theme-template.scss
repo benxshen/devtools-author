@@ -1,0 +1,238 @@
+/* ==============================================
+   Theme Template
+   ============================================== */
+
+// Palette
+
+// Global Settings
+$global-theme-type:;
+$global-font-size :;
+$global-accent    :;
+$global-arrow     :;
+$global-background:;
+$global-boxshadow :;
+$global-divider   :;
+$global-hover     :;
+$global-input     :;
+$global-selected  :;
+$global-text      :;
+$global-label     :;
+$global-warn      :;
+$global-error     :;
+$global-textshadow:;
+
+// JavaScript
+$js-atom      :;
+$js-attribute :;
+$js-builtin   :;
+$js-comment   :;
+$js-def       :;
+$js-error     :;
+$js-header    :;
+$js-hr        :;
+$js-keyword   :;
+$js-link      :;
+$js-meta      :;
+$js-number    :;
+$js-operator  :;
+$js-property  :;
+$js-string    :;
+$js-tag       :;
+$js-variable  :;
+$js-variable-2:;
+
+// JavaScript Objects
+$js-obj-array    :;
+$js-obj-boolean  :;
+$js-obj-function :;
+$js-obj-name     :;
+$js-obj-number   :;
+$js-obj-preview  :;
+$js-obj-regexp   :;
+$js-obj-string   :;
+$js-obj-undefined:;
+
+// CSS
+$css-at-rule   :;
+$css-atom      :;
+$css-builtin   :;
+$css-comment   :;
+$css-def       :;
+$css-important :;
+$css-meta      :;
+$css-number    :;
+$css-operator  :;
+$css-property  :;
+$css-qualifier :;
+$css-string    :;
+$css-string-2  :;
+$css-tag       :;
+$css-variable  :;
+$css-variable-2:;
+
+// HTML Highlighting
+$xml-attribute         :;
+$xml-comment           :;
+$xml-error             :;
+$xml-iframe-root       :;
+$xml-js-node           :;
+$xml-link              :;
+$xml-pseudo            :;
+$xml-pseudo-highlighted:;
+$xml-shadow-root       :;
+$xml-string            :;
+$xml-tag               :;
+
+// Tabbed Header Configuration
+$tab-color-top      :;
+$tab-color-bottom   :;
+$tab-highlighted    :;
+$tab-label          :;
+$tab-label-selected :;
+$tab-label-unsaved  :;
+
+// Toolbars
+$tab-main-icons-padding :;
+$tab-main-toolbar-height:;
+$tab-sub-icons-padding :;
+$tab-sub-toolbar-height:;
+
+// Glyphs
+$glyph-active  :;
+$glyph-inactive:;
+
+// Crumbs
+$crumb-selected-background:;
+$crumb-selected-text      :;
+$crumb-text               :;
+
+// Console
+$console-default-text:;
+$console-input-text  :;
+$console-link        :;
+
+// Dialog [Ctrl/Cmd + O | Ctrl/Cmd + Shift + O]
+$dialog-background     :;
+$dialog-border         :;
+$dialog-item-background:;
+$dialog-item-highlight :;
+$dialog-item-text      :;
+
+// Editor Properties
+$cm-cursor             :;
+$cm-error              :;
+$cm-gutter             :;
+$cm-gutter-border      :;
+$cm-gutter-lines       :;
+$cm-matching-bracket   :;
+$cm-nonmatching-bracket:;
+$cm-lines-no-sourcemap :;
+$cm-selected           :;
+$cm-whitespace         :;
+
+// Element Highlighter
+$eh-base-color          :;
+$eh-children-shadow     :;
+$eh-editing-outline     :;
+$eh-highlight-background:;
+$eh-highlight-outline   :;
+$eh-hover-background    :;
+$eh-hover-outline       :;
+$eh-clipboard-selection :;
+
+// Elements Sidebar
+$style-edit-mode-selector-text:;
+$style-selector-text          :;
+$style-separator              :;
+$style-value                  :;
+
+// Filters
+$filter-background   :;
+$filter-text         :;
+$filter-hover        :;
+$filter-selected     :;
+$filter-selected-text:;
+$filter-error        :;
+$filter-warning      :;
+$filter-info         :;
+$filter-log          :;
+$filter-debug        :;
+
+// Find
+$find-header-background   :;
+$find-header-text         :;
+$find-highlight-background:;
+$find-highlight-text      :;
+
+// Forms
+$form-button-background:;
+$form-button-border    :;
+$form-button-pressed   :;
+$form-button-text      :;
+$form-input-background :;
+$form-input-border     :;
+$form-input-text       :;
+$form-label-text       :;
+
+// Local Modifications
+$history-added-text  :;
+$history-removed-text:;
+
+// Screencast
+$screencast-viewport       :;
+$screencast-viewport-border:;
+
+// Scrollbars
+$sb-thickness      :;
+$sb-thumb-border   :;
+$sb-thumb-color    :;
+$sb-thumb-roundness:;
+
+// Settings
+$settings-background       :;
+$settings-border           :;
+$settings-delimiter        :;
+$settings-dialog           :;
+$settings-edit-background  :;
+$settings-folder-background:;
+$settings-selected         :;
+$settings-text             :;
+
+// Table/Sidebar Selections | Breakpoints
+$selection-background:;
+$selection-border    :;
+$selection-text      :;
+$hover-background:;
+$hover-border    :;
+$hover-text      :;
+
+// Sources Tab
+$sources-exception-all     :;
+$sources-exception-uncaught:;
+$sources-highlight-text    :;
+$sources-pane-background   :;
+$sources-placeholder-text  :;
+$sources-save-background   :;
+$sources-text              :;
+
+// Tables
+$table-primary  :;
+$table-secondary:;
+
+// Timeline
+$timeline-expandable-border   :;
+$timeline-graph-bar           :;
+$timeline-graph-bar-background:;
+$timeline-overview-background :;
+$timeline-graph-selection     :;
+$timeline-progress-pane       :;
+$timeline-resources-divider   :;
+
+// Popovers
+$popover-details-row-title:;
+$popover-details-title    :;
+$popover-title            :;
+$popover-tree-border      :;
+
+// Import Styles
+@import "base/config";
