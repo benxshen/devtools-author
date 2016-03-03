@@ -5,10 +5,16 @@
   var panel = panel || {};
 
   // Select menu
-  var $select = $('[data-options]')[0];
+  var $select = $('#theme-options')[0];
 
-  // Number input
-  var $number = $('input[type=number]')[0];
+  // Font size range input
+  var $range = $('#font-size-input')[0];
+
+  // Font size output
+  var $output = $('#font-size-output')[0];
+
+  // Font family input
+  var $fontInput = $('#font-family-input')[0];
 
   // Palette container
   var $palette = $('.palette')[0];
@@ -26,7 +32,10 @@
   panel.defaultTheme = '3024';
 
   // Default fontSize
-  panel.defaultFontSize = 12;
+  panel.defaultFontSize = 14;
+
+  // Default fontSize
+  panel.defaultFontFamily = 'Hack';
 
   function themeLookUp(theme){
     for (var i = 0; i < panel.themes.length; i++){
@@ -104,6 +113,21 @@
     }
   }
 
+  // Set & save font family based on input change event
+  function setFontFamily(event, value){
+    function save(fontFamily){
+      storage.set({ 'devtools-fontFamily': fontFamily },
+      function(){ panel.currentFontFamily = fontFamily; });
+    }
+    if (event && event.type === 'change'){
+      var el = event.target || event.srcElement;
+      save(el.value);
+      $('.alert')[0].style.display = 'block';
+    } else if (event === null && value){
+      save(value);
+    }
+  }
+
   // Set & save font size based on input menu change event
   function setFontSize(event, value){
     function save(fontSize){
@@ -140,9 +164,21 @@
         $themeTitle.style.display = 'block';
         updatePalette(change.object.currentTheme);
       } else if (change.name === 'currentFontSize') {
-        $number.value = change.object.currentFontSize;
+        $range.value = $output.value = change.object.currentFontSize;
+      } else if (change.name === 'currentFontFamily') {
+        $fontInput.value = change.object.currentFontFamily;
       }
     });
+  }
+
+  // Get fontFamily from chrome sync
+  function getFontFamily(value){
+    if (!value){
+      setFontFamily(null, panel.defaultFontFamily);
+      return panel.defaultFontFamily;
+    } else {
+      return value;
+    }
   }
 
   // Get fontSize from chrome sync
@@ -183,8 +219,11 @@
       // Listen for changes to the select menu
       $select.addEventListener('change', setTheme);
 
-      // Listen for changes to the select menu
-      $number.addEventListener('change', setFontSize);
+      // Listen for changes to the text input
+      $fontInput.addEventListener('change', setFontFamily);
+
+      // Listen for changes to the range input
+      $range.addEventListener('change', setFontSize);
       
       // Listen for click on element
       $('.footer a')[0].addEventListener('click', trackMe);
@@ -204,6 +243,11 @@
       // Get current fontSize from Chrome sync
       storage.get('devtools-fontSize', function(object){
         panel.currentFontSize = getFontSize(object['devtools-fontSize']);
+      });
+
+      // Get current fontSize from Chrome sync
+      storage.get('devtools-fontFamily', function(object){
+        panel.currentFontFamily = getFontFamily(object['devtools-fontFamily']);
       });
     }
 
