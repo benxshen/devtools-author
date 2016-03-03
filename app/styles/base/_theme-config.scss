@@ -6,14 +6,13 @@
  * Base
  */
 @import "base/variables";
-/* @import "base/iconography"; */
+@import "base/iconography";
 @import "base/typography";
 
 /**
  * Modules
  */
 @import "modules/devtools";
-@import "modules/common-styles";
-@import "modules/panel-elements";
-@import "modules/panel-console";
-@import "modules/panel-sources";
+@import "modules/styles";
+@import "modules/elements-panel";
+@import "modules/console-panel";

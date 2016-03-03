@@ -1,10 +1,10 @@
 {
    "name": "DevTools Author",
-   "description": "A selection of author settings for Chrome Developer Tools.",
+   "description": "A simple set of editor settings for Chrome Developer Tools.",
    "permissions": [ "storage" ],
    "devtools_page": "devtools.html",
    "manifest_version": 2,
-   "version": "0.6.3",
+   "version": "0.2.3",
    "icons": { 
       "128": "dist/images/icon_128.png" 
     },

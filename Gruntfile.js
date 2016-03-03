@@ -84,7 +84,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= devtools.dist %>/styles/',
-          src: ['**/*.css'],
+          src: ['*.css', '!*.min.css'],
           dest: '<%= devtools.dist %>/styles/'
         }]
       }
@@ -123,7 +123,6 @@ module.exports = function(grunt) {
         dest: '<%= devtools.dist %>/images',
         src: [
           '{,*/}*.png',
-          '!screenshots/{,*/}*.png',
           '!440x280_small-tile.png',
           '!920x680_large-tile.png',
           '!1400x560_marquee.png',
@@ -143,11 +142,7 @@ module.exports = function(grunt) {
     },
 
     zip: {
-      'dist.zip': {
-        src: ['<%= devtools.dist %>/**/*', 'devtools.html', 'manifest.json'],
-        dest: 'dist.zip',
-        compression: 'DEFLATE'
-      }
+      'dist.zip': ['<%= devtools.dist %>/**/*', 'devtools.html', 'manifest.json']
     }
   });
 

@@ -2,27 +2,21 @@
 <html>
 <head>
   <link rel="stylesheet" href="styles/panel.css" />
-  <script src="scripts/ga.js" async></script>
+  <script src="scripts/ga.js"></script>
 </head>
 <body>
-  <div class="alert">Close and reopen DevTools to apply your changes!</div>
-  
+  <div class="alert">Reload DevTools to apply your changes!</div>
   <div class="container">
       <h4><small>Current Theme:</small></h4>
       <header class="title">
         <h1 id="currentTheme"></h1>
       </header>
       <ul class="palette"></ul>
-      <select id="theme-options" data-options="theme in themes"></select>
-
-      <div class="font-family">
-        <label for="font-family-input">Font Family: <small>(press enter to save)</small></label>
-        <input id="font-family-input" type="text" placeholder="e.g. Menlo" />
-      </div>
+      <select data-options="theme in themes"></select>
       
       <div class="font-size">
-        <label for="font-size-input">Font size: <output id="font-size-output" for="font-size-input"></output>px</label>
-        <input id="font-size-input" type="range" min="10" max="22" />
+        <label for="font-size-input">Font size (px):</label>
+        <input id="font-size-input" type="number" min="10" max="16" value="12" placeholder="Default 12px" />
       </div>
   </div>
   
