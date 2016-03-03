@@ -2,9 +2,17 @@
    Elements Panel
    ========================================================================== */
 
+.panel.elements ::shadow {
+	.elements-disclosure li {
+		line-height: 1.3em !important;
+		font-family: $mono-fonts !important;
+	}
+}
+
 ::shadow {
   .elements-disclosure li.parent::before {
     height: 10px;
     margin-top: 4px;
   }
+
 }

@@ -4,10 +4,11 @@
 
 $dark-theme: false !default;
 
-$grey: rgb(230, 230, 230);
+$grey: rgb(250, 250, 250);
 
 $custom-easing: cubic-bezier(.55,0,.1,1);
 
 $mac-fonts: 'Hack', 'Source Code Pro','Droid Sans Mono', Monaco, Menlo, monospace;
-$win-fonts: 'Hack', 'Source Code Pro','Droid Sans Mono', Consolas, Lucida Console, monospace;
+$win-fonts: 'InputMonoNarrow ExLight', 'Hack', 'Source Code Pro','Droid Sans Mono', Consolas, Lucida Console, monospace;
 $lin-fonts: 'Hack', 'Source Code Pro','Droid Sans Mono', dejavu sans mono, monospace;
+$mono-fonts: 'Droid Sans Mono', 'Consolas', 'WenQuanYi Micro Hei';

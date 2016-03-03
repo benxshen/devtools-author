@@ -26,7 +26,8 @@ $accent                 // Accent / Highlight
       flex: none !important;
 
       .tabbed-pane-header-tab {
-        height: 33px;
+        /* height: 33px; */
+        height: 28px;
       }
     }
 
@@ -39,12 +40,15 @@ $accent                 // Accent / Highlight
     }
 
     // Background - Main Panel
+    #sources-panel-sources-view {
+      background-color: $background !important;
+    }
     #sources-panel-sources-view,
     #console-messages {
-      background-color: $background !important;
+      /* background-color: $background !important; */
 
       .cm-line-without-source-mapping {
-        background-color: $background !important;
+        /* background-color: $background !important; */
       }
 
       .sources-editor-tabstrip-left {
@@ -52,14 +56,14 @@ $accent                 // Accent / Highlight
       }
 
       ::shadow .tabbed-pane-header {
-        background: darken($background, 3.5%) !important;
+        /* background: darken($background, 3.5%) !important; */
         border-bottom: 0 none;
 
         .tabbed-pane-header-tabs-drop-down-container {
           opacity: 1;
           color: $comments;
-          padding: 4px 15px;
-          height: 33px;
+          /* padding: 4px 15px;
+          height: 33px; */
 
           &:hover {
             background-color: darken($background, 2.25%);
@@ -73,7 +77,7 @@ $accent                 // Accent / Highlight
           @if $dark-theme == true {
             background: darken($background, 2%);
           } @else {
-            background: darken($background, 1.5%);   
+            background: darken($background, 1.5%);
           }
           border: 0 none !important;
           box-shadow: inset 0 1px 0 darken($background, 3.5%),
@@ -81,22 +85,22 @@ $accent                 // Accent / Highlight
           color: $comments;
           transition: all 0.15s ease;
 
-          .tabbed-pane-header-tab-title {
+          /* .tabbed-pane-header-tab-title {
             box-sizing: content-box;
             padding: 0 16px;
           }
 
           .tabbed-pane-close-button {
             left: -4px;
-          }
+          } */
 
           ::shadow .close-button-gray {
-            transition: all 0.15s ease;
+            /* transition: all 0.15s ease; */
             opacity: 0;
-            transform: scale(0.25);
+            /* transform: scale(0.25); */
 
             &:hover {
-              background-position: -175px -96px;
+              /* background-position: -175px -96px; */
               opacity: 1;
               transform: scale(1);
             }
@@ -154,7 +158,7 @@ $accent                 // Accent / Highlight
       }
 
       .tabbed-pane-placeholder.fill{
-        font-size: 16px;
+        /* font-size: 16px; */
         text-shadow: none !important;
         color: $comments;
       }
@@ -163,12 +167,12 @@ $accent                 // Accent / Highlight
           z-index: 9;
       }
     }
-    
+
     // Console
     .console-view {
       .toolbar {
-        background: darken($background, 3.5%) !important;
-        border-bottom: 0 none;
+        /* background: darken($background, 3.5%) !important; */
+        /* border-bottom: 0 none; */
 
         &::shadow {
           .toolbar-item {
@@ -177,7 +181,7 @@ $accent                 // Accent / Highlight
           }
         }
       }
-      
+
       #console-messages {
         color: $body-text;
       }
@@ -191,7 +195,7 @@ $accent                 // Accent / Highlight
 
     // Line Numbers
     .CodeMirror-linenumber {
-      font-size: 12px !important;
+      /* font-size: 12px !important; */
     }
 
     // Cursor
@@ -214,7 +218,8 @@ $accent                 // Accent / Highlight
 
     // CSS/JS selected brackets
     .CodeMirror .CodeMirror-matchingbracket {
-      border-bottom: 1px solid $body-text;
+      /* border-bottom: 1px solid $body-text; */
+      background: yellow;
     }
 
     // Comments
@@ -273,7 +278,7 @@ $accent                 // Accent / Highlight
     .cm-string,
     .cm-s-default .cm-string,
     .cm-s-default .cm-string-2,
-    .object-value-number, 
+    .object-value-number,
     .object-value-boolean,
     .object-value-string,
     .object-value-regexp,
@@ -320,7 +325,7 @@ $accent                 // Accent / Highlight
         margin-left: 12px;
 
         .tabbed-pane-header-tab {
-          font-size: 10px;
+          /* font-size: 10px; */
           height: 28px;
           padding: 6px 12px !important;
         }
@@ -343,7 +348,7 @@ $accent                 // Accent / Highlight
         }
       }
 
-      &.left-sidebar-show-hide-button,
+      /* &.left-sidebar-show-hide-button,
       &.top-sidebar-show-hide-button,
       &.right-sidebar-show-hide-button {
         top: 9px;
@@ -355,7 +360,7 @@ $accent                 // Accent / Highlight
       }
 
       &.right-sidebar-show-hide-button {
-      }
+      } */
     }
 
     .resizer-widget {
@@ -366,7 +371,7 @@ $accent                 // Accent / Highlight
     .split-view-sidebar,
     .insertion-point-sidebar {
       background: $grey !important;
-      font-size: 12px !important;
+      /* font-size: 12px !important; */
 
       .outline-disclosure li {
         padding: 3px 0 3px 14px;
@@ -380,25 +385,26 @@ $accent                 // Accent / Highlight
       &::shadow {
 
         .tabbed-pane-header {
-          background-color: transparent;
-          border-bottom: 0 none;
+          /* background-color: transparent; */
+          /* border-bottom: 0 none; */
+          height: 29px;
 
           .tabbed-pane-header-tab {
-            transition: all 0.25s ease;
+            /* transition: all 0.25s ease;
             border-radius: 2px;
             border: 0 none;
             text-align: center;
             height: auto;
-            margin-top: 5px;
+            margin-top: 5px; */
 
-            .tabbed-pane-header-tab-title {
+            /* .tabbed-pane-header-tab-title {
               box-sizing: content-box;
               padding: 0 8px;
             }
 
             &.selected {
               border: 0 none;
-            }
+            } */
           }
         }
       }
@@ -413,38 +419,41 @@ $accent                 // Accent / Highlight
         }
 
         .scripts-debug-toolbar {
-          height: 30px;
+          height: 29px;
 
-          .status-bar-item {
-            width: 32px;
+          /* .status-bar-item {
+            width: 28px;
 
             > .glyph {
               margin: 4px 6px 6px;
               width: 32px;
               height: 20px;
             }
-          }
+          } */
         }
 
+        /* Right side pane */
         .sidebar-pane-stack {
           .sidebar-pane-title {
-            height: 30px;
-            padding: 5px 10px;
-            border-top: 1px solid $grey;
-            border-bottom: 1px solid $grey;
-            line-height: 18px;
+            /* height: 26px; */
+            /* padding: 5px 10px;
+               border-top: 1px solid $grey;
+               border-bottom: 1px solid $grey;
+               line-height: 18px;
+             */
+
 
             .sidebar-pane-toolbar {
-              top: 6px;
+              top: 4px;
             }
 
             &:active {
               background-color: rgb(240, 240, 240) !important;
             }
-
-            &:before {
+            /* open/close indicator icon */
+            /* &:before {
               display: none;
-            }
+            } */
           }
 
           .sidebar-pane.visible {
@@ -458,8 +467,8 @@ $accent                 // Accent / Highlight
 
           .source-code,
           .breakpoint-list .source-text {
-            height: 30px;
-            font-size: 12px !important;
+            /* height: 30px;
+            font-size: 12px !important; */
           }
 
           .breakpoint-list {
@@ -473,11 +482,11 @@ $accent                 // Accent / Highlight
 
             }
 
-            .source-text {
+            /* .source-text {
               padding: 6px;
               border-radius: 2px;
               margin-top: 5px;
-            }
+            } */
           }
         }
 
@@ -487,7 +496,7 @@ $accent                 // Accent / Highlight
       }
 
       // Hide all local resource icons
-      .navigator-document-tree-item,
+      /* .navigator-document-tree-item,
       .navigator-folder-tree-item,
       .navigator-other-tree-item,
       .navigator-script-tree-item,
@@ -495,7 +504,7 @@ $accent                 // Accent / Highlight
         .icon {
           display: none;
         }
-      }
+      } */
     }
 
     // Breakpoint color
