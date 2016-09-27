@@ -2,10 +2,11 @@
 // Generated on Tue Feb 09 2016 15:58:33 GMT-0700 (MST)
 
 module.exports = function(config) {
-  config.set({
+  
+  var configuration = {
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: '.',
 
 
     // frameworks to use
@@ -15,9 +16,17 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'app/**/*.js',
-      'test/**/*-spec.js'
+      'dist/panel.html',
+      'dist/scripts/*.js',
+      'dist/styles/**/*.css',
+      'test/**/*-spec.js',
+      { pattern: 'dist/scripts/themes.json', included: false, served: true }
     ],
+    
+    // Allow resources to be reverse proxied
+    proxies:  {
+      '/dist/scripts/themes.json': '/base/dist/scripts/themes.json'
+    },
 
 
     // list of files to exclude
@@ -65,6 +74,20 @@ module.exports = function(config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
-  })
+    concurrency: Infinity,
+    
+    // Custom Launchers
+    customLaunchers: {
+        Chrome_travis_ci: {
+            base: 'Chrome',
+            flags: ['--no-sandbox']
+        }
+    }
+  };
+
+  if (process.env.TRAVIS) {
+    configuration.browsers = ['Chrome_travis_ci'];
+  }
+
+  config.set(configuration);
 }
